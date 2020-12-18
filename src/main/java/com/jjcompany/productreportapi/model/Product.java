@@ -16,6 +16,7 @@ public class Product {
 	private LocalDate expirationDate;
 	private String flavor;
 	private Double price;
+	private Brand brand;
 	
 	
 	public Long getId() {
@@ -47,5 +48,11 @@ public class Product {
 	}
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	public Brand getBrand() {
+		return brand;
+	}
+	public void setBrand(Brand brand) {
+		this.brand = brand;
 	}
 }
