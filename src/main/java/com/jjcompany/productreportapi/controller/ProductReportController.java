@@ -8,19 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jjcompany.productreportapi.model.Product;
-import com.jjcompany.productreportapi.model.ProductRepository;
+import com.jjcompany.productreportapi.model.ProductReport;
+import com.jjcompany.productreportapi.model.ProductReportRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin
 @RestController
-public class ProductController {
+public class ProductReportController {
 
 	@Autowired
-	private ProductRepository repository;
+	private ProductReportRepository repository;
 	
 	@GetMapping("/product/expired")
-	Collection<Product> findExpiredProducts(){
+	Collection<ProductReport> findExpiredProducts(){
 		return repository.findByExpirationDateBefore(LocalDate.now());
 	}
 	
