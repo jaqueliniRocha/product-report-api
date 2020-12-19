@@ -20,7 +20,7 @@ public class ProductReportController {
 	private ProductReportRepository repository;
 	
 	@GetMapping("/product/expired")
-	Collection<ProductReport> findExpiredProducts(){
+	public Collection<ProductReport> findExpiredProducts(){
 		return repository.findByExpirationDateBefore(LocalDate.now());
 	}
 	
