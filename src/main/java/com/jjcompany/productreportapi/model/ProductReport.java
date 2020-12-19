@@ -16,7 +16,7 @@ public class ProductReport {
 	private LocalDate expirationDate;
 	private String flavor;
 	private Double price;
-	private Brand brand;
+	private String brand;
 	
 	
 	public Long getId() {
@@ -49,10 +49,10 @@ public class ProductReport {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public Brand getBrand() {
+	public String getBrand() {
 		return brand;
 	}
-	public void setBrand(Brand brand) {
+	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 }
