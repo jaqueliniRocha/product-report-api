@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductReportRepository extends JpaRepository<ProductReport, Long>{
 	
-	Collection<ProductReport> findByExpirationDateBefore(LocalDate date); 
+	public Collection<ProductReport> findByExpirationDateBefore(LocalDate date); 
 }
